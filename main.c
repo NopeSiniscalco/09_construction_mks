@@ -18,6 +18,16 @@ int main(){
 	print_population(Data2);
 	print_population(Data3);
 
+	printf("\nPopulation changes:\n\n");
+
+	change_population(Data1,abs(rand()));
+	change_population(Data2,abs(rand()));
+	change_population(Data3,abs(rand()));
+
+	print_population(Data1);
+	print_population(Data2);
+	print_population(Data3);
+
 	free(Data1);
 	free(Data2);
 	free(Data3);

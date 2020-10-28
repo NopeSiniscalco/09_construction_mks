@@ -4,18 +4,25 @@
 #include <string.h>
 #include "struct.h"
 
-struct population * new_population(int i, char *n) {
+struct population *new_population(int i, char *n)
+{
 
-  struct population *nu;
+	struct population *nu;
 
-  nu = malloc( sizeof(struct population) );
+	nu = malloc(sizeof(struct population));
 
-  strncpy(nu->city, n, sizeof(nu->city)-1);
-  nu->population = i;
+	strncpy(nu->city, n, sizeof(nu->city) - 1);
+	nu->population = i;
 
-  return nu;
+	return nu;
 }
 
-void print_population(struct population * inputData){
-	printf("%s -> %d\n",inputData->city,inputData->population);
+void print_population(struct population *inputData)
+{
+	printf("%s -> %d\n", inputData->city, inputData->population);
+}
+
+void change_population(struct population *inputData, int new_population)
+{
+	inputData->population=new_population;
 }
