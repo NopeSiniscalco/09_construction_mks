@@ -5,8 +5,21 @@
 #include <string.h>
 
 int main(){
-	struct temp *Data1;
-	Data1=new_temp(72,"New York");
-	print_temp(Data1);
+	srand(time(NULL));
+
+	struct population *Data1;
+	Data1=new_population(abs(rand()),"New York");
+	struct population *Data2;
+	Data2=new_population(abs(rand()),"Rome");
+	struct population *Data3;
+	Data3=new_population(abs(rand()),"London");
+
+	print_population(Data1);
+	print_population(Data2);
+	print_population(Data3);
+
+	free(Data1);
+	free(Data2);
+	free(Data3);
 	return 0;
 }
